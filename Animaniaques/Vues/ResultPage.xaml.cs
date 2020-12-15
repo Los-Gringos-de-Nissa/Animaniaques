@@ -20,26 +20,11 @@ namespace Animaniaques.Vues
     /// <summary>
     /// Une page vide peut être utilisée seule ou constituer une page de destination au sein d'un frame.
     /// </summary>
-    public sealed partial class MainView : Page
+    public sealed partial class ResultPage : Page
     {
-        public MainView()
+        public ResultPage()
         {
             this.InitializeComponent();
-        }
-
-        private void Button_Geo(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(GeoPage));
-        }
-
-        private void Button_French(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(FrenchPage));
-        }
-
-        private void Button_Math(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(MathPage));
         }
     }
 }
