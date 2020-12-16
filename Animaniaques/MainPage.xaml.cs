@@ -13,6 +13,10 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Animaniaques.Vues;
+using Windows.UI.Xaml.Media.Animation;
+using System.Drawing;
+using System.Threading;
+using Windows.UI;
 
 // Pour plus d'informations sur le modèle d'élément Page vierge, consultez la page https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -30,7 +34,18 @@ namespace Animaniaques
 
         private void Button_Nav(object sender, RoutedEventArgs e)
         {
+            Animation_Btn();
             this.Frame.Navigate(typeof(MainView));
+        }
+
+        private void Animation_Btn()
+        {
+            LayoutMain.Background = new SolidColorBrush(Colors.White);
+            for (int i = 0; i < 50; i++)
+            {
+                txb_loading.Visibility = Visibility.Visible;
+                Thread.Sleep(50);
+            }
         }
     }
 }
