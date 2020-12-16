@@ -8,5 +8,22 @@ namespace Animaniaques.Classes
 {
     class Result
     {
+        private int score;
+
+        public Result(int score)
+        {
+            this.score = score;
+        }
+
+        public String ResultMessage()
+        {
+            if(this.score <= 2 )
+            {
+                return "Oups! Tu n'a pas la moyenne";
+            } else
+            {
+                return "Houra! Tu es le meilleur, au dessus de la moyenne !";
+            }
+        }
     }
 }
