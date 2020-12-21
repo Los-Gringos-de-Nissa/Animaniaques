@@ -26,10 +26,10 @@
             <Button Click="btnLaunchMath" Background="CadetBlue" HorizontalAlignment="Center" Content="Débuter l'exercice"></Button>
         </StackPanel>
         <StackPanel Grid.Row="1">
-            <ListBox x:Name="operation" ItemsSource="{Binding}" Height="350" Width="500" Margin="0,0,0,0"></ListBox>
+            <ListBox x:Name="operation" ItemsSource="{Binding}" Height="350" Width="500" Margin="0,0,0,0" SelectionChanged="operation_SelectionChanged"></ListBox>
         </StackPanel>
-        <StackPanel Grid.Row="2">
-            <TextBox x:Name="Reponse" PlaceholderText="{Binding ElementName=operation, Path=SelectedItem}"></TextBox>
+        <StackPanel Grid.Row="2" Height="250" VerticalAlignment="Top">
+            <TextBox x:Name="response" PlaceholderText="{Binding ElementName=operation, Path=SelectedItem}" Text="" TextChanged="Reponse_TextChanged"></TextBox>
         </StackPanel>
         <StackPanel Grid.Row="3">
             <Button Click="btnValid" Background="ForestGreen" HorizontalAlignment="Center" Content="Valider la réponse"></Button>

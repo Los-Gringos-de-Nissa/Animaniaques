@@ -28,6 +28,7 @@ namespace Animaniaques.Vues
         int result;
 
         private MathsOperations MO = new MathsOperations();
+        private Result resultMaths = new Result(0);
         public MathPage()
         {
             this.InitializeComponent();
@@ -47,19 +48,53 @@ namespace Animaniaques.Vues
                 if (prenom != "")
                 {
                     Random rnd = new Random();
-                    chiffre1 = rnd.Next(2, 9);
-                    chiffre2 = rnd.Next(2, 9);
-                    result = chiffre1 * chiffre2;
-                    MO.AddOperation(new Maths(prenom, chiffre1, chiffre2, result));
+                    int chiffre1 = rnd.Next(2, 9);
+                    int chiffre2 = rnd.Next(2, 9);
+                   // int result = (chiffre1 * chiffre2);
+                    MO.AddOperation(new Maths(prenom, chiffre1, chiffre2));
                 }
             }
         }
 
         /*private void btnValid(object sender, RoutedEventArgs e)
         {
-            string prenom = Prenom.Text;
-            MO[MathsOperations.SelectedIndex] = new Maths(prenom, chiffre1, chiffre2, result);
-            string operation1 = Reponse.Text;
-        }*/
+            var resInput = response.Text;
+            int res = Int32.Parse(resInput);
+            string a = operation.SelectedItem.ToString();
+            string b = string.Empty;
+            int val;
+
+            for (int i = 0; i < a.Length; i++)
+            {
+                if (Char.IsDigit(a[i]))
+                    b += a[i];
+            }
+
+            string chiffre1 = b[0].ToString();
+            int result1 = Int32.Parse(chiffre1);
+            var chiffre2 = b[1].ToString();
+            int result2 = Int32.Parse(chiffre2);
+
+            if(result1 * result2 == res)
+            {
+                resultMaths.AddPoint();
+            }
+            int index = operation.SelectedIndex;
+        }
+
+        private void Reponse_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
+        }
+        
+        private void operation_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+        }
+
+        private void checkResult()
+        {
+            var resInput = response.Text;
+                     
+        }
     }
 }

@@ -42,17 +42,16 @@ namespace Animaniaques.Classes
             set { this.reponse = value; }
         }*/
 
-        public Maths(string prenom, int chiffre1, int chiffre2, int result)
+        public Maths(string prenom, int chiffre1, int chiffre2)
         {
             this.prenom = prenom;
             this.chiffre1 = chiffre1;
             this.chiffre2 = chiffre2;
-            this.result = result;
         }
 
         override public String ToString()
         {
-            return "Opération : " + chiffre1 + " x " + chiffre2 + " = " + result;
+            return "Opération : " + chiffre1 + " x " + chiffre2 + " = " + "?";
 
             /*if (reponse == result)
             {
