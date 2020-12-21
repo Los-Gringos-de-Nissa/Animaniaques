@@ -23,9 +23,6 @@ namespace Animaniaques.Vues
     /// </summary>
     public sealed partial class MathPage : Page
     {
-        int chiffre1;
-        int chiffre2;
-        int result;
 
         private MathsOperations MO = new MathsOperations();
         private Result resultMaths = new Result(0);
@@ -56,7 +53,7 @@ namespace Animaniaques.Vues
             }
         }
 
-        /*private void btnValid(object sender, RoutedEventArgs e)
+        private void btnValid(object sender, RoutedEventArgs e)
         {
             var resInput = response.Text;
             int res = Int32.Parse(resInput);
