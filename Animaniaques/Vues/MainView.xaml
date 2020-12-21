@@ -9,8 +9,8 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Button x:Name="btn_math" CornerRadius="40" Background="CadetBlue" Content="Partir en Math !" Click="Button_Math" HorizontalAlignment="Center" Height="200" Width="200" Margin="0,464,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btn_geo" CornerRadius="40" Background="CadetBlue" Content="Partir en Geo !" Click="Button_Geo" Height="200" Width="200" Margin="440,157,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btn_french" CornerRadius="40" Background="CadetBlue" Content="Partir en Francais !" Click="Button_French" Height="200" Width="200" Margin="847,162,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btn_math" CornerRadius="40" Background="CadetBlue" Content="Partir en Maths !" Click="Button_Math" HorizontalAlignment="Center" Height="200" Width="200" Margin="0,464,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btn_geo" CornerRadius="40" Background="CadetBlue" Content="Partir en Géo !" Click="Button_Geo" Height="200" Width="200" Margin="440,157,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btn_french" CornerRadius="40" Background="CadetBlue" Content="Partir en Français !" Click="Button_French" Height="200" Width="200" Margin="847,162,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Page>

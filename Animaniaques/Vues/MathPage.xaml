@@ -5,10 +5,14 @@
     xmlns:local="using:Animaniaques.Vues"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Res/maths.svg" Stretch="UniformToFill" Opacity="0.25"/>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
@@ -19,16 +23,16 @@
             <TextBlock Margin="0,20,0,0" HorizontalAlignment="Center" FontSize="40" Text="Exercice de multiplications"></TextBlock>
             <TextBlock Text="Prenom"></TextBlock>
             <TextBox x:Name="Prenom"></TextBox>
-            <Button Click="btnLaunchMath" HorizontalAlignment="Center" Content="Débuter l'exercice"></Button>
+            <Button Click="btnLaunchMath" Background="CadetBlue" HorizontalAlignment="Center" Content="Débuter l'exercice"></Button>
         </StackPanel>
         <StackPanel Grid.Row="1">
             <ListBox x:Name="operation" ItemsSource="{Binding}" Height="350" Width="500" Margin="0,0,0,0"></ListBox>
         </StackPanel>
         <StackPanel Grid.Row="2">
-            <TextBox x:Name="Reponse" PlaceholderText="Ecrire le résultat ici" Text="{Binding ElementName=operation, Path=SelectedItem.ToString}"></TextBox>
+            <TextBox x:Name="Reponse" PlaceholderText="{Binding ElementName=operation, Path=SelectedItem}"></TextBox>
         </StackPanel>
         <StackPanel Grid.Row="3">
-            <Button Click="btnValid" HorizontalAlignment="Center" Content="Valider les réponses"></Button>
+            <Button Click="btnValid" Background="ForestGreen" HorizontalAlignment="Center" Content="Valider la réponse"></Button>
         </StackPanel>
     </Grid>
 </Page>

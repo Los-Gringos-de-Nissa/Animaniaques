@@ -9,6 +9,9 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Res/french.png" Stretch="UniformToFill" Opacity="0.25"/>
+        </Grid.Background>
 
     </Grid>
 </Page>

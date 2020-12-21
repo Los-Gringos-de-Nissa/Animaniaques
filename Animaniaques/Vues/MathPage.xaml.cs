@@ -23,6 +23,10 @@ namespace Animaniaques.Vues
     /// </summary>
     public sealed partial class MathPage : Page
     {
+        int chiffre1;
+        int chiffre2;
+        int result;
+
         private MathsOperations MO = new MathsOperations();
         public MathPage()
         {
@@ -33,10 +37,9 @@ namespace Animaniaques.Vues
         private void btnLaunchMath(object sender, RoutedEventArgs e)
         {
             string prenom = Prenom.Text;
-
-
             //var operationList = new List<string>();
             int i = 1;
+
             while (i < 6)
             {
                 i++;
@@ -44,17 +47,19 @@ namespace Animaniaques.Vues
                 if (prenom != "")
                 {
                     Random rnd = new Random();
-                    int chiffre1 = rnd.Next(2, 9);
-                    int chiffre2 = rnd.Next(2, 9);
-                    int result = (chiffre1 * chiffre2);
+                    chiffre1 = rnd.Next(2, 9);
+                    chiffre2 = rnd.Next(2, 9);
+                    result = chiffre1 * chiffre2;
                     MO.AddOperation(new Maths(prenom, chiffre1, chiffre2, result));
                 }
             }
         }
 
-        private void btnValid(object sender, RoutedEventArgs e)
+        /*private void btnValid(object sender, RoutedEventArgs e)
         {
-            
-        }
+            string prenom = Prenom.Text;
+            MO[MathsOperations.SelectedIndex] = new Maths(prenom, chiffre1, chiffre2, result);
+            string operation1 = Reponse.Text;
+        }*/
     }
 }
