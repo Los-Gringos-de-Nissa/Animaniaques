@@ -9,6 +9,26 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Margin="0,20,0,0" HorizontalAlignment="Center" FontSize="40" Text="Exercice de multiplications"></TextBlock>
+            <TextBlock Text="Prenom"></TextBlock>
+            <TextBox x:Name="Prenom"></TextBox>
+            <Button Click="btnLaunchMath" HorizontalAlignment="Center" Content="Débuter l'exercice"></Button>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <ListBox x:Name="operation" ItemsSource="{Binding}" Height="350" Width="500" Margin="0,0,0,0"></ListBox>
+        </StackPanel>
+        <StackPanel Grid.Row="2">
+            <TextBox x:Name="Reponse" PlaceholderText="Ecrire le résultat ici" Text="{Binding ElementName=operation, Path=SelectedItem.ToString}"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="3">
+            <Button Click="btnValid" HorizontalAlignment="Center" Content="Valider les réponses"></Button>
+        </StackPanel>
     </Grid>
 </Page>

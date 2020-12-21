@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Animaniaques.Classes;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,9 +23,38 @@ namespace Animaniaques.Vues
     /// </summary>
     public sealed partial class MathPage : Page
     {
+        private MathsOperations MO = new MathsOperations();
         public MathPage()
         {
             this.InitializeComponent();
+            operation.DataContext = MO;
+        }
+
+        private void btnLaunchMath(object sender, RoutedEventArgs e)
+        {
+            string prenom = Prenom.Text;
+
+
+            //var operationList = new List<string>();
+            int i = 1;
+            while (i < 6)
+            {
+                i++;
+                //operationList.Add("Opération n°=" + i + " : " + chiffre1 + " x " + chiffre2 + " = " + result);
+                if (prenom != "")
+                {
+                    Random rnd = new Random();
+                    int chiffre1 = rnd.Next(2, 9);
+                    int chiffre2 = rnd.Next(2, 9);
+                    int result = (chiffre1 * chiffre2);
+                    MO.AddOperation(new Maths(prenom, chiffre1, chiffre2, result));
+                }
+            }
+        }
+
+        private void btnValid(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }
