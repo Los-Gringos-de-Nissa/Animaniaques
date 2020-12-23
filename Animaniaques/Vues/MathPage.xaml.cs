@@ -55,28 +55,38 @@ namespace Animaniaques.Vues
 
         private void btnValid(object sender, RoutedEventArgs e)
         {
+            
             var resInput = response.Text;
-            int res = Int32.Parse(resInput);
-            string a = operation.SelectedItem.ToString();
-            string b = string.Empty;
-            int val;
-
-            for (int i = 0; i < a.Length; i++)
+            if (resInput != "")
             {
-                if (Char.IsDigit(a[i]))
-                    b += a[i];
-            }
+                int res = Int32.Parse(resInput);
+                string a = operation.SelectedItem.ToString();
+                string b = string.Empty;
+                int val;
 
-            string chiffre1 = b[0].ToString();
-            int result1 = Int32.Parse(chiffre1);
-            var chiffre2 = b[1].ToString();
-            int result2 = Int32.Parse(chiffre2);
+                for (int i = 0; i < a.Length; i++)
+                {
+                    if (Char.IsDigit(a[i]))
+                        b += a[i];
+                }
 
-            if(result1 * result2 == res)
+                string chiffre1 = b[0].ToString();
+                int result1 = Int32.Parse(chiffre1);
+                var chiffre2 = b[1].ToString();
+                int result2 = Int32.Parse(chiffre2);
+
+                if (result1 * result2 == res)
+                {
+                    resultMaths.AddPoint();
+                }
+                int index = operation.SelectedIndex;
+            } 
+            // manage the error cases here when the user enter a wrong typo e.g test
+            else
             {
-                resultMaths.AddPoint();
+
             }
-            int index = operation.SelectedIndex;
+            
         }
 
         private void Reponse_TextChanged(object sender, TextChangedEventArgs e)
