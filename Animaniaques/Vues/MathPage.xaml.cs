@@ -25,7 +25,7 @@ namespace Animaniaques.Vues
     {
 
         private MathsOperations MO = new MathsOperations();
-        private Result resultMaths = new Result(0);
+        private Result resultMaths = new Result();
 
         public MathPage()
         {
@@ -77,14 +77,13 @@ namespace Animaniaques.Vues
                 // if user has the good answer, add 1 point to result
                 if (result1 * result2 == res)
                 {
-                    resultMaths.AddPoint();
+                    resultMaths.Score++;
                     int index = operation.SelectedIndex;
                     MO.RemoveAt(index);
                 }
                 // if user has the wrong answer, add 0 point to result
                 else if (result1 * result2 != res)
                 {
-                    resultMaths.NoPoint();
                     int index = operation.SelectedIndex;
                     MO.RemoveAt(index);
                 }
@@ -99,6 +98,8 @@ namespace Animaniaques.Vues
                 {
                     this.Frame.Navigate(typeof(ResultPage));
                 }
+
+            response.Text = "";
             }    
 
         private void Reponse_TextChanged(object sender, TextChangedEventArgs e)

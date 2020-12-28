@@ -10,9 +10,14 @@ namespace Animaniaques.Classes
     {
         private int score;
 
-        public Result(int score)
+        public int Score   // property
         {
-            this.score = score;
+            get { return score; }   // get method
+            set { score = value; }  // set method
+        }
+
+        public Result()
+        {
         }
 
         public int AddPoint()
