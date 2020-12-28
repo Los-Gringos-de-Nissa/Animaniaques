@@ -15,5 +15,10 @@ namespace Animaniaques.Classes
         {
             this.Add(C);
         }
+
+        public void DeleteOperation(Maths C)
+        {
+            this.Remove(C);
+        }
     }
 }

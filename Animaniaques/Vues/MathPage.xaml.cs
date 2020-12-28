@@ -23,9 +23,6 @@ namespace Animaniaques.Vues
     /// </summary>
     public sealed partial class MathPage : Page
     {
-        int chiffre1;
-        int chiffre2;
-        int result;
 
         private MathsOperations MO = new MathsOperations();
         private Result resultMaths = new Result(0);
@@ -50,36 +47,70 @@ namespace Animaniaques.Vues
                     Random rnd = new Random();
                     int chiffre1 = rnd.Next(2, 9);
                     int chiffre2 = rnd.Next(2, 9);
-                   // int result = (chiffre1 * chiffre2);
                     MO.AddOperation(new Maths(prenom, chiffre1, chiffre2));
                 }
             }
         }
 
-        /*private void btnValid(object sender, RoutedEventArgs e)
+        private void btnValid(object sender, RoutedEventArgs e)
         {
+<<<<<<< HEAD
+
+            if (MO.Count >= 0) { 
             var resInput = response.Text;
             int res = Int32.Parse(resInput);
             string a = operation.SelectedItem.ToString();
             string b = string.Empty;
-            int val;
 
             for (int i = 0; i < a.Length; i++)
+=======
+            
+            var resInput = response.Text;
+            if (resInput != "")
+>>>>>>> develop
             {
-                if (Char.IsDigit(a[i]))
-                    b += a[i];
-            }
+                int res = Int32.Parse(resInput);
+                string a = operation.SelectedItem.ToString();
+                string b = string.Empty;
+                int val;
 
-            string chiffre1 = b[0].ToString();
-            int result1 = Int32.Parse(chiffre1);
-            var chiffre2 = b[1].ToString();
-            int result2 = Int32.Parse(chiffre2);
+                for (int i = 0; i < a.Length; i++)
+                {
+                    if (Char.IsDigit(a[i]))
+                        b += a[i];
+                }
 
-            if(result1 * result2 == res)
+                string chiffre1 = b[0].ToString();
+                int result1 = Int32.Parse(chiffre1);
+                var chiffre2 = b[1].ToString();
+                int result2 = Int32.Parse(chiffre2);
+
+                if (result1 * result2 == res)
+                {
+                    resultMaths.AddPoint();
+                }
+                int index = operation.SelectedIndex;
+            } 
+            // manage the error cases here when the user enter a wrong typo e.g test
+            else
             {
+<<<<<<< HEAD
                 resultMaths.AddPoint();
+                int index = operation.SelectedIndex;
+                MO.RemoveAt(index);
             }
-            int index = operation.SelectedIndex;
+
+            if (MO.Count == 0)
+                {
+                    this.Frame.Navigate(typeof(MainView));
+                }
+
+            }
+=======
+
+            }
+            
+>>>>>>> develop
         }
 
         private void Reponse_TextChanged(object sender, TextChangedEventArgs e)
