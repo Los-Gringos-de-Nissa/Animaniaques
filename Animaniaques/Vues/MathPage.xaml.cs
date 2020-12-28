@@ -26,6 +26,7 @@ namespace Animaniaques.Vues
 
         private MathsOperations MO = new MathsOperations();
         private Result resultMaths = new Result(0);
+
         public MathPage()
         {
             this.InitializeComponent();
@@ -73,9 +74,17 @@ namespace Animaniaques.Vues
                 var chiffre2 = b[1].ToString();
                 int result2 = Int32.Parse(chiffre2);
 
+                // if user has the good answer, add 1 point to result
                 if (result1 * result2 == res)
                 {
                     resultMaths.AddPoint();
+                    int index = operation.SelectedIndex;
+                    MO.RemoveAt(index);
+                }
+                // if user has the wrong answer, add 0 point to result
+                else if (result1 * result2 != res)
+                {
+                    resultMaths.NoPoint();
                     int index = operation.SelectedIndex;
                     MO.RemoveAt(index);
                 }
@@ -90,7 +99,6 @@ namespace Animaniaques.Vues
                 {
                     this.Frame.Navigate(typeof(ResultPage));
                 }
-
             }    
 
         private void Reponse_TextChanged(object sender, TextChangedEventArgs e)

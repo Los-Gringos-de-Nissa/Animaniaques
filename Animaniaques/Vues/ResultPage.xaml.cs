@@ -25,6 +25,17 @@ namespace Animaniaques.Vues
         public ResultPage()
         {
             this.InitializeComponent();
+            LoadResults();
+        }
+
+        private void LoadResults()
+        {
+
+        }
+
+        private void operation_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

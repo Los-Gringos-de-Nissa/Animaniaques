@@ -20,6 +20,11 @@ namespace Animaniaques.Classes
            return this.score + 1;
         }
 
+        public int NoPoint()
+        {
+            return this.score + 0;
+        }
+
         public String ResultMessage()
         {
             if(this.score <= 2 )
