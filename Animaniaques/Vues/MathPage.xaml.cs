@@ -47,7 +47,6 @@ namespace Animaniaques.Vues
                     Random rnd = new Random();
                     int chiffre1 = rnd.Next(2, 9);
                     int chiffre2 = rnd.Next(2, 9);
-                   // int result = (chiffre1 * chiffre2);
                     MO.AddOperation(new Maths(prenom, chiffre1, chiffre2));
                 }
             }
@@ -55,11 +54,12 @@ namespace Animaniaques.Vues
 
         private void btnValid(object sender, RoutedEventArgs e)
         {
+
+            if (MO.Count >= 0) { 
             var resInput = response.Text;
             int res = Int32.Parse(resInput);
             string a = operation.SelectedItem.ToString();
             string b = string.Empty;
-            int val;
 
             for (int i = 0; i < a.Length; i++)
             {
@@ -75,8 +75,16 @@ namespace Animaniaques.Vues
             if(result1 * result2 == res)
             {
                 resultMaths.AddPoint();
+                int index = operation.SelectedIndex;
+                MO.RemoveAt(index);
             }
-            int index = operation.SelectedIndex;
+
+            if (MO.Count == 0)
+                {
+                    this.Frame.Navigate(typeof(MainView));
+                }
+
+            }
         }
 
         private void Reponse_TextChanged(object sender, TextChangedEventArgs e)
