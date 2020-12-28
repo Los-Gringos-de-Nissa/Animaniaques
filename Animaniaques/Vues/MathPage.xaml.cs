@@ -54,7 +54,6 @@ namespace Animaniaques.Vues
 
         private void btnValid(object sender, RoutedEventArgs e)
         {
-<<<<<<< HEAD
 
             if (MO.Count >= 0) { 
             var resInput = response.Text;
@@ -62,17 +61,6 @@ namespace Animaniaques.Vues
             string a = operation.SelectedItem.ToString();
             string b = string.Empty;
 
-            for (int i = 0; i < a.Length; i++)
-=======
-            
-            var resInput = response.Text;
-            if (resInput != "")
->>>>>>> develop
-            {
-                int res = Int32.Parse(resInput);
-                string a = operation.SelectedItem.ToString();
-                string b = string.Empty;
-                int val;
 
                 for (int i = 0; i < a.Length; i++)
                 {
@@ -88,30 +76,22 @@ namespace Animaniaques.Vues
                 if (result1 * result2 == res)
                 {
                     resultMaths.AddPoint();
+                    int index = operation.SelectedIndex;
+                    MO.RemoveAt(index);
                 }
-                int index = operation.SelectedIndex;
             } 
             // manage the error cases here when the user enter a wrong typo e.g test
             else
             {
-<<<<<<< HEAD
-                resultMaths.AddPoint();
-                int index = operation.SelectedIndex;
-                MO.RemoveAt(index);
+                
             }
 
             if (MO.Count == 0)
                 {
-                    this.Frame.Navigate(typeof(MainView));
+                    this.Frame.Navigate(typeof(ResultPage));
                 }
 
-            }
-=======
-
-            }
-            
->>>>>>> develop
-        }
+            }    
 
         private void Reponse_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -120,12 +100,8 @@ namespace Animaniaques.Vues
         
         private void operation_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+
         }
 
-        private void checkResult()
-        {
-            var resInput = response.Text;
-                     
-        }
     }
 }
