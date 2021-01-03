@@ -30,18 +30,21 @@ namespace Animaniaques.Vues
 
         private void LoadResults()
         {
-
-        }
-
-        private void operation_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
+        
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            
+            if (e.Parameter is string && !string.IsNullOrWhiteSpace((string)e.Parameter))
+            {
+                result.Text = $"{e.Parameter}";
+            }
             base.OnNavigatedTo(e);
+        }
+
+        private void btnMenu_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainView));
         }
     }
 }

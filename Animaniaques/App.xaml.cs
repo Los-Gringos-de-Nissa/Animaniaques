@@ -68,7 +68,7 @@ namespace Animaniaques
                     // puis configurez la nouvelle page en transmettant les informations requises en tant que
                     // paramètre
                     //rootFrame.Navigate(typeof(MainPage), e.Arguments);
-                    rootFrame.Navigate(typeof(MathPage), e.Arguments);
+                    rootFrame.Navigate(typeof(FrenchPage), e.Arguments);
                 }
                 // Vérifiez que la fenêtre actuelle est active
                 Window.Current.Activate();

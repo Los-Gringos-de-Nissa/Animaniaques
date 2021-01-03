@@ -25,7 +25,7 @@ namespace Animaniaques.Vues
     {
 
         private MathsOperations MO = new MathsOperations();
-        private Result resultMaths = new Result();
+        Result resultMaths = new Result();
 
         public MathPage()
         {
@@ -96,8 +96,8 @@ namespace Animaniaques.Vues
 
             if (MO.Count == 0)
                 {
-                    this.Frame.Navigate(typeof(ResultPage));
-                }
+                this.Frame.Navigate(typeof(ResultPage), resultMaths.ResultMessage());
+            }
 
             response.Text = "";
             }    

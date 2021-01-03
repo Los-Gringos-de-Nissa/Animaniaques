@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Animaniaques.Classes;
 
 // Pour plus d'informations sur le modèle d'élément Page vierge, consultez la page https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -22,9 +23,42 @@ namespace Animaniaques.Vues
     /// </summary>
     public sealed partial class FrenchPage : Page
     {
+
+        Result resultFrench = new Result();
+
         public FrenchPage()
         {
             this.InitializeComponent();
+        }
+
+        private void send_Click(object sender, RoutedEventArgs e)
+        {
+            checkResult();
+            this.Frame.Navigate(typeof(ResultPage), resultFrench.ResultMessage());
+        }
+
+        private void checkResult()
+        {
+            if (reponse1.Text == "animaux" || reponse1.Text == "Animaux")
+            {
+                resultFrench.Score++;
+            }
+            else if (reponse2.Text == "êtes" || reponse2.Text == "Êtes")
+            {
+                resultFrench.Score++;
+            }
+            else if (reponse3.Text == "trouver" || reponse3.Text == "Trouver")
+            {
+                resultFrench.Score++;
+            }
+            else if (reponse4.Text == "adjectif" || reponse4.Text == "Adjectif" || reponse4.Text == "adjectifs" || reponse4.Text == "Adjectifs")
+            {
+                resultFrench.Score++;
+            }
+            else if (reponse5.Text == "peux" || reponse5.Text == "Peux" || reponse5.Text == "je peux" || reponse5.Text == "Je peux")
+            {
+                resultFrench.Score++;
+            }
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Animaniaques.Classes
 {
-    class Result
+     class Result
     {
         private int score;
 
@@ -34,10 +34,10 @@ namespace Animaniaques.Classes
         {
             if(this.score <= 2 )
             {
-                return "Oups! Tu n'a pas la moyenne";
+                return $"Oups! Tu n'a pas la moyenne, tu as {this.score} sur 5 points possible... Tu feras mieux la prochaine fois c'est sur !";
             } else
             {
-                return "Houra! Tu es le meilleur, au dessus de la moyenne !";
+                return $"Houra! Tu es le meilleur, au dessus de la moyenne ! Tu as {this.score} sur 5 points possible, tu es un champion !";
             }
         }
     }
