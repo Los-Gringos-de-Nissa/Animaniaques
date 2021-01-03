@@ -29,9 +29,10 @@
         </StackPanel>
         <StackPanel Grid.Row="2" Height="250" VerticalAlignment="Top">
             <TextBox x:Name="response" PlaceholderText="{Binding ElementName=operation, Path=SelectedItem}" Text="" TextChanged="Reponse_TextChanged"></TextBox>
+            <Button Click="btnValid" Background="ForestGreen" HorizontalAlignment="Center" Content="Valider la réponse" Margin="0,10,0,0"></Button>
         </StackPanel>
         <StackPanel Grid.Row="3">
-            <Button Click="btnValid" Background="ForestGreen" HorizontalAlignment="Center" Content="Valider la réponse"></Button>
+            <Button Click="btnMenu_Click" Background="White" HorizontalAlignment="Center" Content="Retour au menu" Margin="0,40,0,0"></Button>
         </StackPanel>
     </Grid>
 </Page>

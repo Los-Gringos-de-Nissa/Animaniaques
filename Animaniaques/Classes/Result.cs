@@ -34,10 +34,10 @@ namespace Animaniaques.Classes
         {
             if(this.score <= 2 )
             {
-                return $"Oups! Tu n'a pas la moyenne, tu as {this.score} sur 5 points possible... Tu feras mieux la prochaine fois c'est sur !";
+                return $"Oups! Tu n'as pas la moyenne, tu as {this.score} sur 5 points possibles... Tu feras mieux la prochaine fois c'est sûr !";
             } else
             {
-                return $"Houra! Tu es le meilleur, au dessus de la moyenne ! Tu as {this.score} sur 5 points possible, tu es un champion !";
+                return $"Houra! T'es au-dessus de la moyenne ! Tu as {this.score} sur 5 points possibles, continue comme ça !";
             }
         }
     }

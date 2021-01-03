@@ -112,5 +112,9 @@ namespace Animaniaques.Vues
 
         }
 
+        private void btnMenu_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainView));
+        }
     }
 }

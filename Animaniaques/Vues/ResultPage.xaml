@@ -9,7 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <TextBlock x:Name="presentation" HorizontalAlignment="Center" Text="Merci d'avoir joué avec les Mathématiques" FontSize="50" FontFamily="Corbel" />
+        <TextBlock x:Name="presentation" HorizontalAlignment="Center" Text="Merci d'avoir joué avec les Mathématiques" FontSize="50" Margin="0,20,0,0" FontFamily="Corbel" />
         <StackPanel Margin="-10,178,10,-178">
             <TextBlock x:Name="name" HorizontalAlignment="Center" Text="Enter your name" FontSize="25" Margin="25"/>
             <TextBlock x:Name="result" HorizontalAlignment="Center" Text="Enter your name" FontSize="25"/>

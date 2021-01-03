@@ -12,7 +12,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="/Res/background-img-ani.png" Stretch="UniformToFill"/>
         </Grid.Background>
-        <Button x:Name="btn_main" CornerRadius="40" Background="CadetBlue" Content="Lancez vous !" Click="Button_Nav" HorizontalAlignment="Center" Height="200" Width="200"/>
+        <Button x:Name="btn_main" FontSize="20" CornerRadius="40" Background="CadetBlue" Content="Lancez vous !" Click="Button_Nav" HorizontalAlignment="Center" Height="200" Width="200"/>
         <TextBlock x:Name="txb_loading" Visibility="Collapsed" Text="On charge votre page !" FontSize="30" Margin="0,358,0,0" HorizontalAlignment="Center" Height="652" VerticalAlignment="Top" Width="103"></TextBlock>
     </Grid>
 </Page>
