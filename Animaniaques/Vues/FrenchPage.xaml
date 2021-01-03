@@ -12,17 +12,35 @@
         <Grid.Background>
             <ImageBrush ImageSource="/Res/french.png" Stretch="UniformToFill" Opacity="0.25"/>
         </Grid.Background>
-        <TextBlock x:Name="Introduction"  Text="Bienvenue dans le jeu du français ! '\n' Répondez aux questions dans les boites à cotés. Ecrivez les mots en parenthèse avec le bonne orthographe et répondez aux interrogations des animaniaques !" FontSize="20" Margin="48,71,30,826"/>
-        <TextBlock x:Name="question1" Width="500"  Text="J'adore les (animmaux) de la jungle ! " FontSize="20" Margin="48,224,952,713"/>
-        <TextBlock x:Name="question2" Width="500"  Text="Vous (ete) des animaniaques !" FontSize="20" Margin="48,351,952,591"/>
-        <TextBlock x:Name="question3" Width="500"  Text="Je vais me (trouve) un chien ! " FontSize="20" Margin="48,450,952,476"/>
-        <TextBlock x:Name="question4"  Text="Comment appelle t'on les mots comme 'grand', 'bleu', 'gentil' en français ?" FontSize="20" Margin="48,575,788,369"/>
-        <TextBlock x:Name="question5" Width="500"  Height="150"  Text="Quel est la première personne du verbe pouvoir ?  " FontSize="20" Margin="48,673,952,177"/>
-        <TextBox x:Name="reponse1" Width="150" Text="TEst" FontSize="20" Margin="750,207,600,733"/>
-        <TextBox x:Name="reponse2" Width="150" Text="TEst" FontSize="20" Margin="750,438,600,510"/>
-        <TextBox x:Name="reponse3" Width="150" Text="TEst" FontSize="20" Margin="750,340,600,612"/>
-        <TextBox x:Name="reponse4" Text="TEst" FontSize="20" Margin="750,561,578,383"/>
-        <TextBox x:Name="reponse5" Text="TEst" FontSize="20" Margin="750,661,578,289"/>
-        <Button x:Name="send" Background="Green" Click="send_Click" Margin="595,772,0,0" VerticalAlignment="Top" Height="63">Valider vos réponses !</Button>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="900" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="250" />
+        </Grid.RowDefinitions>
+        
+        <StackPanel Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,50,0,0">
+            <TextBlock x:Name="Introduction" HorizontalAlignment="Center" Text="Bienvenue dans le jeu du français !" FontSize="30"/>
+            <TextBlock x:Name="Introduction2" HorizontalAlignment="Center" Text="Répondez aux questions dans les boites à cotés." FontSize="20"/>
+            <TextBlock x:Name="Introduction3" HorizontalAlignment="Center" Text="Ecrivez les mots en parenthèse avec le bonne orthographe et répondez aux interrogations des animaniaques !"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0">
+            <TextBlock Grid.Column="0" x:Name="question1" Width="760" Text="J'adore les (.............) de la jungle !" FontSize="20"/>
+            <TextBlock Grid.Column="0" x:Name="question2" Width="760" Text="Vous (.............) des animaniaques !" FontSize="20"/>
+            <TextBlock Grid.Column="0" x:Name="question3" Width="760" Text="Je vais me (.............) un chien !" FontSize="20"/>
+            <TextBlock Grid.Column="0" x:Name="question4" Width="760" Text="Comment appelle-t-on les mots comme 'grand', 'bleu', 'gentil' en français ?" FontSize="20"/>
+            <TextBlock Grid.Column="0" x:Name="question5" Width="760" Height="150" Text="Comment faut-t-il conjuguer le verbe 'pouvoir' à la première personne du singulier ? " FontSize="20"/>
+            <TextBox Grid.Column="1" x:Name="reponse1" Width="350" PlaceholderText="animaux - animals - animeaux" FontSize="20"/>
+            <TextBox Grid.Column="1" x:Name="reponse2" Width="350" PlaceholderText="aites - êtes - ète" FontSize="20"/>
+            <TextBox Grid.Column="1" x:Name="reponse3" Width="350" PlaceholderText="trouvé - trouvais - trouver" FontSize="20"/>
+            <TextBox Grid.Column="1" x:Name="reponse4" Width="350" PlaceholderText="pronoms - adverbes - adjectifs" FontSize="20"/>
+            <TextBox Grid.Column="1" x:Name="reponse5" Width="350" PlaceholderText="Je peut - Je puis - Je peux" FontSize="20"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button x:Name="send" Background="ForestGreen" Click="send_Click" VerticalAlignment="Top" Height="63" Content="Valider vos réponses !"></Button>
+        </StackPanel>
     </Grid>
 </Page>
