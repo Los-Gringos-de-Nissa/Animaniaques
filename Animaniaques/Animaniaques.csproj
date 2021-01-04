@@ -161,6 +161,8 @@
     <Content Include="Res\french.png" />
     <Content Include="Res\geo.svg" />
     <Content Include="Res\maths.svg" />
+    <Content Include="Res\result-3236285_640.jpg" />
+    <Content Include="Res\rubiks-cube-3732404_640.jpg" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">

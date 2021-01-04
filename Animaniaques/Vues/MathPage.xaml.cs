@@ -35,7 +35,6 @@ namespace Animaniaques.Vues
 
         private void btnLaunchMath(object sender, RoutedEventArgs e)
         {
-            //var operationList = new List<string>();
             int i = 1;
 
             while (i < 6)
