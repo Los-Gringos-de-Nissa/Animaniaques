@@ -9,6 +9,9 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Res/result-3236285_640.jpg" Stretch="UniformToFill" Opacity="0.2"/>
+        </Grid.Background>
         <TextBlock x:Name="presentation" HorizontalAlignment="Center" Text="Merci d'avoir joué, voici ton résultat" FontSize="50" Margin="0,20,0,0" FontFamily="Corbel" />
         <StackPanel Margin="-10,178,10,-178">
             <TextBlock x:Name="name" HorizontalAlignment="Center" Text="Enter your name" FontSize="25" Margin="25"/>

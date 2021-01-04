@@ -56,5 +56,9 @@ namespace Animaniaques.Vues
                 resultGeo.Score++;
             }
         }
+        private void btnMenu_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainView));
+        }
     }
 }
