@@ -20,8 +20,6 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">
             <TextBlock Margin="0,20,0,0" HorizontalAlignment="Center" FontSize="40" Text="Exercice de multiplications"></TextBlock>
-            <TextBlock Text="Prenom"></TextBlock>
-            <TextBox x:Name="Prenom"></TextBox>
             <Button Click="btnLaunchMath" Background="CadetBlue" HorizontalAlignment="Center" Content="Débuter l'exercice"></Button>
         </StackPanel>
         <StackPanel Grid.Row="1">

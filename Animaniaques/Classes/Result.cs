@@ -9,6 +9,13 @@ namespace Animaniaques.Classes
      class Result
     {
         private int score;
+        private string name;
+
+        public string Name    // property
+        {
+            get { return name; }   // get method
+            set { name = value; }  // set method
+        }
 
         public int Score   // property
         {
@@ -20,14 +27,9 @@ namespace Animaniaques.Classes
         {
         }
 
-        public int AddPoint()
+        public void ResetScore()
         {
-           return this.score + 1;
-        }
-
-        public int NoPoint()
-        {
-            return this.score + 0;
+            Score = 0;
         }
 
         public String ResultMessage()

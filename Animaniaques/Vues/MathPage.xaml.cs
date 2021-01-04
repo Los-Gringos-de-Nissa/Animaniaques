@@ -35,21 +35,16 @@ namespace Animaniaques.Vues
 
         private void btnLaunchMath(object sender, RoutedEventArgs e)
         {
-            string prenom = Prenom.Text;
             //var operationList = new List<string>();
             int i = 1;
 
             while (i < 6)
             {
-                i++;
-                //operationList.Add("Opération n°=" + i + " : " + chiffre1 + " x " + chiffre2 + " = " + result);
-                if (prenom != "")
-                {
+                    i++;
                     Random rnd = new Random();
                     int chiffre1 = rnd.Next(2, 9);
                     int chiffre2 = rnd.Next(2, 9);
-                    MO.AddOperation(new Maths(prenom, chiffre1, chiffre2));
-                }
+                    MO.AddOperation(new Maths(chiffre1, chiffre2));
             }
         }
 

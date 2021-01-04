@@ -18,6 +18,7 @@ using System.Drawing;
 using System.Threading;
 using Windows.UI;
 using Windows.UI.Xaml.Shapes;
+using Animaniaques.Classes;
 
 // Pour plus d'informations sur le modèle d'élément Page vierge, consultez la page https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -28,6 +29,8 @@ namespace Animaniaques
     /// </summary>
     public sealed partial class MainPage : Page
     {
+
+        Result result = new Result();
         Ellipse myEllipse;
         public MainPage()
         {
@@ -36,6 +39,8 @@ namespace Animaniaques
 
         private void Button_Nav(object sender, RoutedEventArgs e)
         {
+            result.Name = Prenom.Text;
+            Application.Current.Resources["Username"] = result.Name;
             Animation_Btn();
             this.Frame.Navigate(typeof(MainView));
         }

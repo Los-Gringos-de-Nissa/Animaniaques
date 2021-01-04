@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Animaniaques.Classes;
 
 // Pour plus d'informations sur le modèle d'élément Page vierge, consultez la page https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -37,7 +38,9 @@ namespace Animaniaques.Vues
         {
             if (e.Parameter is string && !string.IsNullOrWhiteSpace((string)e.Parameter))
             {
+                String username = (String) Application.Current.Resources["Username"];
                 result.Text = $"{e.Parameter}";
+                name.Text = username;
             }
             base.OnNavigatedTo(e);
         }

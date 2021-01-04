@@ -8,17 +8,10 @@ namespace Animaniaques.Classes
 {
     class Maths
     {
-        private string prenom;
         private int chiffre1;
         private int chiffre2;
         private int result;
-        //private int reponse;
 
-        public string Prenom
-        {
-            get { return prenom; }
-            set { this.prenom = value; }
-        }
         public int Chiffre1
         {
             get { return chiffre1; }
@@ -42,9 +35,8 @@ namespace Animaniaques.Classes
             set { this.reponse = value; }
         }*/
 
-        public Maths(string prenom, int chiffre1, int chiffre2)
+        public Maths(int chiffre1, int chiffre2)
         {
-            this.prenom = prenom;
             this.chiffre1 = chiffre1;
             this.chiffre2 = chiffre2;
         }
