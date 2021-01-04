@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
+using Microsoft.Toolkit.Uwp;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
@@ -15,6 +10,7 @@ using Windows.UI.Xaml.Navigation;
 using Animaniaques.Vues;
 using Windows.UI.Xaml.Media.Animation;
 using System.Drawing;
+using Microsoft.Toolkit.Uwp.UI.Animations;
 using System.Threading;
 using Windows.UI;
 using Windows.UI.Xaml.Shapes;
@@ -31,76 +27,24 @@ namespace Animaniaques
     {
 
         Result result = new Result();
-        Ellipse myEllipse;
+        private Storyboard myStoryboard;
         public MainPage()
         {
             this.InitializeComponent();
         }
 
-        private void Button_Nav(object sender, RoutedEventArgs e)
+        private async void Button_Nav(object sender, RoutedEventArgs e)
         {
+
             result.Name = Prenom.Text;
             Application.Current.Resources["Username"] = result.Name;
-            Animation_Btn();
+
+           await btn_main.Rotate(value: 360.0f,
+                         centerX: 0.5f,
+                         centerY: 0.0f,
+                         duration: 5000, delay: 0).StartAsync();
+
             this.Frame.Navigate(typeof(MainView));
-        }
-
-        private void Animation_Btn()
-        {
-            LayoutMain.Background = new SolidColorBrush(Colors.White);
-            addEllipse();
-            for (int i = 0; i < 50; i++)
-            {
-                txb_loading.Visibility = Visibility.Visible;
-                Thread.Sleep(50);
-            }
-        }
-
-        public void addEllipse()
-        {
-            myEllipse = new Ellipse();
-
-            Windows.UI.Color myColor = Windows.UI.Color.FromArgb(255, 0, 0, 0);
-            SolidColorBrush myBrush = new SolidColorBrush();
-            myBrush.Color = myColor;
-
-            myEllipse.Stroke = myBrush;
-            myEllipse.Fill = myBrush;
-            myEllipse.HorizontalAlignment = HorizontalAlignment.Left;
-            myEllipse.VerticalAlignment = VerticalAlignment.Center;
-            myEllipse.Width = 50;
-            myEllipse.Height = 100;
-
-            LayoutMain.Children.Add(myEllipse);
-
-            this.setAnimationToEllipse();
-        }
-
-        public void setAnimationToEllipse()
-        {
-            //Paramétrage de l'animation
-            TranslateTransform moveTransform = new TranslateTransform();
-            moveTransform.X = 0;
-            moveTransform.Y = 0;
-            myEllipse.RenderTransform = moveTransform;
-
-            Duration duration = new Duration(TimeSpan.FromSeconds(2));
-
-            DoubleAnimation myDoubleAnimationX = new DoubleAnimation();
-            myDoubleAnimationX.Duration = duration;
-
-            // Creation d’un storyBoard
-            Storyboard justintimeStoryboard = new Storyboard();
-            justintimeStoryboard.Duration = duration;
-            justintimeStoryboard.Children.Add(myDoubleAnimationX);
-            Storyboard.SetTarget(myDoubleAnimationX, moveTransform);
-
-            Storyboard.SetTargetProperty(myDoubleAnimationX, "X");
-            myDoubleAnimationX.To = 1500;
-
-            LayoutMain.Resources.Add("justintimeStoryboard", justintimeStoryboard);
-
-            justintimeStoryboard.Begin();
         }
     }
 }
