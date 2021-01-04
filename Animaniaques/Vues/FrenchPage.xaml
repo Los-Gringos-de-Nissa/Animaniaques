@@ -20,8 +20,8 @@
         
         <StackPanel Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,30,0,0">
             <TextBlock x:Name="Introduction" HorizontalAlignment="Center" Text="Bienvenue dans le jeu du français !" FontSize="30"/>
-            <TextBlock x:Name="Introduction2" HorizontalAlignment="Center" Text="Répondez aux questions dans les boites en-dessous." FontSize="20"/>
-            <TextBlock x:Name="Introduction3" HorizontalAlignment="Center" Text="Ecrivez les mots manquants entre parenthèses avec la bonne orthographe et répondez aux interrogations des animaniaques !"/>
+            <TextBlock x:Name="Introduction2" HorizontalAlignment="Center" Text="Répondre aux questions dans les boites en-dessous." FontSize="20"/>
+            <TextBlock x:Name="Introduction3" HorizontalAlignment="Center" Text="Ecrire les mots manquants entre parenthèses avec la bonne orthographe et répondre aux interrogations des animaniaques !"/>
         </StackPanel>
         <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10,0,0,0">
             <TextBlock x:Name="question1" Width="600" Text="J'adore les (.............) de la jungle !" FontSize="15"/>
@@ -36,7 +36,7 @@
             <TextBox x:Name="reponse5" Width="600" PlaceholderText="Je peut - Je puis - Je peux" FontSize="15"/>
         </StackPanel>
         <StackPanel Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <Button x:Name="send" Background="ForestGreen" Click="send_Click" VerticalAlignment="Top" Height="40" Content="Valider vos réponses !"></Button>
+            <Button x:Name="send" Background="ForestGreen" Click="send_Click" VerticalAlignment="Top" Height="40" Content="Valider mes réponses !"></Button>
         </StackPanel>
     </Grid>
 </Page>

@@ -20,8 +20,8 @@
 
         <StackPanel Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,30,0,0">
             <TextBlock x:Name="Introduction" HorizontalAlignment="Center" Text="Bienvenue dans le jeu de géographie !" FontSize="30"/>
-            <TextBlock x:Name="Introduction2" HorizontalAlignment="Center" Text="Répondez aux questions dans les boites en-dessous." FontSize="20"/>
-            <TextBlock x:Name="Introduction3" HorizontalAlignment="Center" Text="Remplaçez les mots manquants entre parenthèses avec la capitale correspondant au pays de chaque question"/>
+            <TextBlock x:Name="Introduction2" HorizontalAlignment="Center" Text="Répondre aux questions dans les boites en-dessous." FontSize="20"/>
+            <TextBlock x:Name="Introduction3" HorizontalAlignment="Center" Text="Remplaçer les mots manquants entre parenthèses avec la capitale correspondante au pays de chaque question"/>
         </StackPanel>
         <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10,0,0,0">
             <TextBlock x:Name="question1" Width="600" Text="Quelle est la capitale de l'Espagne ?" FontSize="15"/>
@@ -36,7 +36,7 @@
             <TextBox x:Name="reponse5" Width="600" PlaceholderText="Pointe-à-Pitre - Paris - Poitiers" FontSize="15"/>
         </StackPanel>
         <StackPanel Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <Button x:Name="send" Background="ForestGreen" Click="send_Click" VerticalAlignment="Top" Height="40" Content="Valider vos réponses !"></Button>
+            <Button x:Name="send" Background="ForestGreen" Click="send_Click" VerticalAlignment="Top" Height="40" Content="Valider mes réponses !"></Button>
         </StackPanel>
     </Grid>
 </Page>
