@@ -9,6 +9,11 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <Grid.Background>
+            <ImageBrush ImageSource="/Res/rubiks-cube-3732404_640.jpg" Stretch="UniformToFill" Opacity="0.25"/>
+        </Grid.Background>
+        <Button x:Name="btn_math" FontSize="20" CornerRadius="40" Background="CadetBlue" Content="Partir en Maths !" Click="Button_Math" HorizontalAlignment="Center" Height="200" Width="200" Margin="0,400,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btn_geo" FontSize="20" CornerRadius="40" Background="CadetBlue" Content="Partir en Géo !" Click="Button_Geo" Height="200" Width="200" Margin="440,100,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btn_french" FontSize="20" CornerRadius="40" Background="CadetBlue" Content="Partir en Français !" Click="Button_French" Height="200" Width="200" Margin="847,100,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Page>

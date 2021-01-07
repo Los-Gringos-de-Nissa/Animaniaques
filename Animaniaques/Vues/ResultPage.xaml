@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="Animaniaques.Vues.ResultPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Animaniaques.Vues"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Res/result-3236285_640.jpg" Stretch="UniformToFill" Opacity="0.2"/>
+        </Grid.Background>
+        <TextBlock x:Name="presentation" HorizontalAlignment="Center" Text="Merci d'avoir joué, voici ton résultat" FontSize="50" Margin="0,20,0,0" FontFamily="Corbel" />
+        <StackPanel Margin="-10,178,10,-178">
+            <TextBlock x:Name="name" HorizontalAlignment="Center" Text="Enter your name" FontSize="25" Margin="25"/>
+            <TextBlock x:Name="result" HorizontalAlignment="Center" Text="Enter your name" FontSize="25"/>
+            
+            <TextBlock x:Name="mailText" HorizontalAlignment="Center" Text="Si vous souhaitez envoyer vos réultats sur une adresse mail, remplissez l'email ci-dessous" FontSize="25"/>
+            <TextBox x:Name="userMail"  HorizontalAlignment="Center"  PlaceholderText="Email"  FontSize="25" Width="310"/>
+            <Button x:Name="btnMail" Click="btnMail_Click" HorizontalAlignment="Center" Margin="25">Envoyer les résultats !</Button>
+            <Button x:Name="btnMenu" Click="btnMenu_Click" HorizontalAlignment="Center" Margin="25">Retour au menu !</Button>
+        </StackPanel>
+        
+    </Grid>
+</Page>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Animaniaques.Classes;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,9 +23,42 @@ namespace Animaniaques.Vues
     /// </summary>
     public sealed partial class GeoPage : Page
     {
+        Result resultGeo = new Result();
         public GeoPage()
         {
             this.InitializeComponent();
+        }
+        private void send_Click(object sender, RoutedEventArgs e)
+        {
+            checkResult();
+            this.Frame.Navigate(typeof(ResultPage), resultGeo.ResultMessage());
+        }
+        private void checkResult()
+        {
+            if (reponse1.Text == "madrid" || reponse1.Text == "Madrid")
+            {
+                resultGeo.Score++;
+            }
+            if (reponse2.Text == "canberra" || reponse2.Text == "Canberra")
+            {
+                resultGeo.Score++;
+            }
+            if (reponse3.Text == "rabat" || reponse3.Text == "Rabat")
+            {
+                resultGeo.Score++;
+            }
+            if (reponse4.Text == "washington" || reponse4.Text == "Washington")
+            {
+                resultGeo.Score++;
+            }
+            if (reponse5.Text == "paris" || reponse5.Text == "Paris")
+            {
+                resultGeo.Score++;
+            }
+        }
+        private void btnMenu_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainView));
         }
     }
 }

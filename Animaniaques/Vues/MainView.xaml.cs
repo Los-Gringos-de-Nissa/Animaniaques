@@ -6,6 +6,9 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
+using Windows.UI.Xaml.Media.Animation;
+using System.Drawing;
+using Microsoft.Toolkit.Uwp.UI.Animations;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
@@ -25,6 +28,33 @@ namespace Animaniaques.Vues
         public MainView()
         {
             this.InitializeComponent();
+        }
+
+        private async void Button_Geo(object sender, RoutedEventArgs e)
+        {
+            await btn_geo.Rotate(value: 360.0f,
+                         centerX: 0.5f,
+                         centerY: 0.0f,
+                         duration: 1000, delay: 0).StartAsync();
+            this.Frame.Navigate(typeof(GeoPage));
+        }
+
+        private async void Button_French(object sender, RoutedEventArgs e)
+        {
+            await btn_french.Rotate(value: 360.0f,
+                         centerX: 0.5f,
+                         centerY: 0.0f,
+                         duration: 1000, delay: 0).StartAsync();
+            this.Frame.Navigate(typeof(FrenchPage));
+        }
+
+        private async void Button_Math(object sender, RoutedEventArgs e)
+        {
+            await btn_math.Rotate(value: 360.0f,
+                         centerX: 0.5f,
+                         centerY: 0.0f,
+                         duration: 1000, delay: 0).StartAsync();
+            this.Frame.Navigate(typeof(MathPage));
         }
     }
 }

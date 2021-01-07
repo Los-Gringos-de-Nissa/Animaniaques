@@ -9,6 +9,29 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <Grid.Background>
+            <ImageBrush ImageSource="/Res/maths.svg" Stretch="UniformToFill" Opacity="0.25"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Margin="0,20,0,0" HorizontalAlignment="Center" FontSize="40" Text="Exercice de multiplications"></TextBlock>
+            <TextBlock Margin="0,0,0,10" HorizontalAlignment="Center" Text="Cliquer sur 'Débuter l'exercice', Sélectionner une opération et répondre en dessous"></TextBlock>
+            <Button Click="btnLaunchMath" Background="CadetBlue" HorizontalAlignment="Center" Content="Débuter l'exercice"></Button>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <ListBox x:Name="operation" ItemsSource="{Binding}" Height="350" Width="500" Margin="0,0,0,0" SelectionChanged="operation_SelectionChanged"></ListBox>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Height="250" VerticalAlignment="Top">
+            <TextBox x:Name="response" PlaceholderText="{Binding ElementName=operation, Path=SelectedItem}" Text="" TextChanged="Reponse_TextChanged"></TextBox>
+            <Button Click="btnValid" Background="ForestGreen" HorizontalAlignment="Center" Content="Valider la réponse" Margin="0,10,0,0"></Button>
+        </StackPanel>
+        <StackPanel Grid.Row="3">
+            <Button Click="btnMenu_Click" Background="White" HorizontalAlignment="Center" Content="Retour au menu" Margin="0,40,0,0"></Button>
+        </StackPanel>
     </Grid>
 </Page>

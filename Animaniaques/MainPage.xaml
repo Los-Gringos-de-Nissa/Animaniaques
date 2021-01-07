@@ -8,7 +8,16 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-
+    <Grid x:Name="LayoutMain">
+        <Grid.Background>
+            <ImageBrush ImageSource="/Res/background-img-ani.png" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <StackPanel Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,30,0,0">
+            <TextBlock Foreground="DarkBlue" Margin="0,10,0,0" HorizontalAlignment="Center" FontSize="40" Text="Bienvenue à toi jeune animaniaque !"></TextBlock>
+            <TextBlock Foreground="OrangeRed" FontSize="25" Text="ENTRE TON PRÉNOM CI-DESSOUS: "></TextBlock>
+            <TextBox x:Name="Prenom" PlaceholderText ="Prenom"></TextBox>
+        </StackPanel>
+        <Button x:Name="btn_main" FontSize="20" CornerRadius="40" Background="CadetBlue" Content="Lancez vous !" Click="Button_Nav" HorizontalAlignment="Center" Height="200" Width="200" Margin="0,415,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="txb_loading" Visibility="Collapsed" Text="On charge votre page !" FontSize="30" Margin="0,358,0,0" HorizontalAlignment="Center" Height="652" VerticalAlignment="Top" Width="103"></TextBlock>
     </Grid>
 </Page>
