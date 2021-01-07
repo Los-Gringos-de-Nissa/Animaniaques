@@ -33,6 +33,7 @@ namespace Animaniaques
             this.InitializeComponent();
         }
 
+        // Animation sur le bouton de lancement de l'application
         private async void Button_Nav(object sender, RoutedEventArgs e)
         {
 
@@ -43,7 +44,7 @@ namespace Animaniaques
                          centerX: 0.5f,
                          centerY: 0.0f,
                          duration: 5000, delay: 0).StartAsync();
-
+            // Navigation vers la page principale de l'application avec les 3 exercices
             this.Frame.Navigate(typeof(MainView));
         }
     }

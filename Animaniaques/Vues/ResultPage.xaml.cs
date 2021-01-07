@@ -36,6 +36,7 @@ namespace Animaniaques.Vues
         
         }
 
+        // Récupération du prénom pour l'afficher dans la page des résultats
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             if (e.Parameter is string && !string.IsNullOrWhiteSpace((string)e.Parameter))
@@ -52,6 +53,7 @@ namespace Animaniaques.Vues
             this.Frame.Navigate(typeof(MainView));
         }
 
+        // Technologie non vue en cours : possibilité de recevoir les résultats par mail
         private void btnMail_Click(object sender, RoutedEventArgs e)
         {
             string server = "smtp.gmail.com";

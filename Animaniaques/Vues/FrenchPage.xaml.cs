@@ -36,7 +36,8 @@ namespace Animaniaques.Vues
             checkResult();
             this.Frame.Navigate(typeof(ResultPage), resultFrench.ResultMessage());
         }
-
+        // Vérification des réponses données par l'utilisateur
+        // Ajout d'un point par bonne réponse
         private void checkResult()
         {
 

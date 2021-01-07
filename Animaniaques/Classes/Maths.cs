@@ -12,6 +12,7 @@ namespace Animaniaques.Classes
         private int chiffre2;
         private int result;
 
+        // getter et setter pour les chiffres et le résultat des multiplications
         public int Chiffre1
         {
             get { return chiffre1; }
@@ -35,6 +36,7 @@ namespace Animaniaques.Classes
             this.chiffre2 = chiffre2;
         }
 
+        // Format des multiplications générées
         override public String ToString()
         {
             return "Opération : " + chiffre1 + " x " + chiffre2 + " = " + "?";

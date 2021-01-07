@@ -29,7 +29,7 @@ namespace Animaniaques.Vues
         {
             this.InitializeComponent();
         }
-
+        // Animations sur les boutons des différents exercices
         private async void Button_Geo(object sender, RoutedEventArgs e)
         {
             await btn_geo.Rotate(value: 360.0f,

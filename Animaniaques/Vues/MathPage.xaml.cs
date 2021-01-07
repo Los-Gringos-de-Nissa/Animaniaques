@@ -36,7 +36,7 @@ namespace Animaniaques.Vues
         private void btnLaunchMath(object sender, RoutedEventArgs e)
         {
             int i = 1;
-
+            // Au lancement de l'exercice, 5 opérations de multiplication sont générées aléatoirement
             while (i < 6)
             {
                     i++;
@@ -68,14 +68,14 @@ namespace Animaniaques.Vues
                 var chiffre2 = b[1].ToString();
                 int result2 = Int32.Parse(chiffre2);
 
-                // if user has the good answer, add 1 point to result
+                // si l'utilisateur a la bonne réponse on ajoute 1 point au Score
                 if (result1 * result2 == res)
                 {
                     resultMaths.Score++;
                     int index = operation.SelectedIndex;
                     MO.RemoveAt(index);
                 }
-                // if user has the wrong answer, add 0 point to result
+                // si l'utilisateur n'a pas la bonne réponse on n'ajoute pas de point au Score
                 else if (result1 * result2 != res)
                 {
                     int index = operation.SelectedIndex;

@@ -27,11 +27,13 @@ namespace Animaniaques.Classes
         {
         }
 
+        // Réinitialisation du score à 0
         public void ResetScore()
         {
             Score = 0;
         }
 
+        // Messages en fonction de la note obtenue sur 5 points possibles
         public String ResultMessage()
         {
             if(this.score <= 2 )
