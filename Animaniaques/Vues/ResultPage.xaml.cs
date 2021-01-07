@@ -13,6 +13,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Animaniaques.Classes;
+using System.Net.Mail;
+using System.Net;
 
 // Pour plus d'informations sur le modèle d'élément Page vierge, consultez la page https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -48,6 +50,35 @@ namespace Animaniaques.Vues
         private void btnMenu_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainView));
+        }
+
+        private void btnMail_Click(object sender, RoutedEventArgs e)
+        {
+            string server = "smtp.gmail.com";
+            string to = userMail.Text;
+            string from = "lesanimaniaques@gmail.com";
+            MailMessage message = new MailMessage(from, to);
+            message.IsBodyHtml = true;
+            message.Subject = "Résultats animaniaques";
+            message.Body = result.Text;
+
+            SmtpClient client = new SmtpClient();
+            client.Host = server;
+            client.Port = 587;
+            client.EnableSsl = true;
+            client.UseDefaultCredentials = false;
+            NetworkCredential netCre = new NetworkCredential("lesanimaniaques@gmail.com", "losgringosdenissa");
+            client.Credentials = netCre;
+
+            try
+            {
+                client.Send(message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Exception caught in CreateTestMessage2(): {0}",
+                    ex.ToString());
+            }
         }
     }
 }

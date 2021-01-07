@@ -16,7 +16,12 @@
         <StackPanel Margin="-10,178,10,-178">
             <TextBlock x:Name="name" HorizontalAlignment="Center" Text="Enter your name" FontSize="25" Margin="25"/>
             <TextBlock x:Name="result" HorizontalAlignment="Center" Text="Enter your name" FontSize="25"/>
+            
+            <TextBlock x:Name="mailText" HorizontalAlignment="Center" Text="Si vous souhaitez envoyer vos réultats sur une adresse mail, remplissez l'email ci-dessous" FontSize="25"/>
+            <TextBox x:Name="userMail"  HorizontalAlignment="Center"  PlaceholderText="Email"  FontSize="25" Width="310"/>
+            <Button x:Name="btnMail" Click="btnMail_Click" HorizontalAlignment="Center" Margin="25">Envoyer les résultats !</Button>
             <Button x:Name="btnMenu" Click="btnMenu_Click" HorizontalAlignment="Center" Margin="25">Retour au menu !</Button>
         </StackPanel>
+        
     </Grid>
 </Page>
