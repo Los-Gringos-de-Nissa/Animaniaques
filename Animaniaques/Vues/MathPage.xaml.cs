@@ -82,11 +82,6 @@ namespace Animaniaques.Vues
                     MO.RemoveAt(index);
                 }
             } 
-            // manage the error cases here when the user enter a wrong typo e.g test
-            else
-            {
-                
-            }
 
             if (MO.Count == 0)
                 {
