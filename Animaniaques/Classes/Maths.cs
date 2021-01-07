@@ -29,12 +29,6 @@ namespace Animaniaques.Classes
             set { this.result = value; }
         }
 
-        /*public int Reponse
-        {
-            get { return reponse; }
-            set { this.reponse = value; }
-        }*/
-
         public Maths(int chiffre1, int chiffre2)
         {
             this.chiffre1 = chiffre1;
@@ -44,11 +38,6 @@ namespace Animaniaques.Classes
         override public String ToString()
         {
             return "Opération : " + chiffre1 + " x " + chiffre2 + " = " + "?";
-
-            /*if (reponse == result)
-            {
-                return "Opération n°=1 : " + chiffre1 + " x " + chiffre2 + " = " + result;
-            }*/
         }
     }
 }
